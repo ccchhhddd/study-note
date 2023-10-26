@@ -2,6 +2,8 @@ using Documenter
 format = Documenter.HTML(assets=["assets/css/notes.css"])
 
 Optimization = map(file -> joinpath("Optimization", file), readdir(joinpath(@__DIR__, "src", "Optimization")))
+Front_end = map(file -> joinpath("Front_end", file), readdir(joinpath(@__DIR__, "src", "Front_end")))
+mac_share = map(file -> joinpath("mac_share", file), readdir(joinpath(@__DIR__, "src", "mac_share")))
 
 
 makedocs(
@@ -17,6 +19,8 @@ makedocs(
     pages=[
         "Home" => "index.md",
         "Optimization" => Optimization,
+        "Front_end"=>Front_end,
+        "mac_share"=>mac_share
     ],
     format=format,
 )
