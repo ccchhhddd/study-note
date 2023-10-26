@@ -1,14 +1,11 @@
-# notes.github.io
+# study-note 个人学习文档分享空间
 
-
-个人CS笔记网站，先随便玩玩
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://ccchhhddd.github.io)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://ccchhhddd.github.io/study-note/dev/)
 
 ## 内容
 
 ```@eval
 dirs = ["Optimization"]
-
 "总篇数：$(sum(map(file -> length(readdir(joinpath(@__DIR__,"..","src",file))), dirs)))"
 ```
 
@@ -16,4 +13,9 @@ dirs = ["Optimization"]
 
 ```@contents
 Pages = map(file -> joinpath("Optimization", file), readdir("Optimization"))
+```
+
+### 前端
+```@contents
+Pages = map(file -> joinpath("Front-end", file), readdir("Front-end"))
 ```
