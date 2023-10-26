@@ -5,7 +5,7 @@
 ## 内容
 
 ```@eval
-dirs = ["Optimization"]
+dirs = ["Optimization,'Pages' "]
 "总篇数：$(sum(map(file -> length(readdir(joinpath(@__DIR__,"..","src",file))), dirs)))"
 ```
 
