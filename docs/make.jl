@@ -3,11 +3,11 @@ format = Documenter.HTML(assets=["assets/css/notes.css"])
 
 Optimization = map(file -> joinpath("Optimization", file), readdir(joinpath(@__DIR__, "src", "Optimization")))
 Front_end = map(file -> joinpath("Front_end", file), readdir(joinpath(@__DIR__, "src", "Front_end")))
-mac_share = map(file -> joinpath("mac_share", file), readdir(joinpath(@__DIR__, "src", "mac_share")))
-
+Mac_share = map(file -> joinpath("Mac_share", file), readdir(joinpath(@__DIR__, "src", "Mac_share")))
+Web_build = map(file -> joinpath("Web_build", file), readdir(joinpath(@__DIR__, "src", "Web_build")))
 
 makedocs(
-    sitename="study-note",
+    sitename="study notes",
     strict=[
              :doctest,
              :linkcheck,
@@ -20,7 +20,8 @@ makedocs(
         "Home" => "index.md",
         "Optimization" => Optimization,
         "Front_end"=>Front_end,
-        "mac_share"=>mac_share
+        "Mac_share"=>Mac_share,
+        "Web_build"=>Web_build
     ],
     format=format,
 )

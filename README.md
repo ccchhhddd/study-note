@@ -1,7 +1,7 @@
-# study-note
-个人笔记网站
+# chd的学习文档分享空间
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://ccchhhddd.github.io/study-note)
+欢迎共同学习交流！
+![Stable](https://img.shields.io/badge/Docs-Updating...-blue.svg?style=flat-square)
 
 本地编译markdown文件到html请使用如下命令：
 ```shell
