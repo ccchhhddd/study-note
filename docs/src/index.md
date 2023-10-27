@@ -17,7 +17,7 @@
 ## 学习文档内容
 
 ```@eval
-dirs = ["Optimization","Front_end","Mac_share"]
+dirs = ["Optimization","Front_end","Mac_share","Web_build"]
 "总篇数：$(sum(map(file -> length(readdir(joinpath(@__DIR__,"..","src",file))), dirs)))"
 ```
 ### 网页构建
@@ -38,5 +38,5 @@ Pages = map(file -> joinpath("Front_end", file), readdir("Front_end"))
 
 ### Mac
 ```@contents
-Pages = map(file -> joinpath("mac_share", file), readdir("Mac_share"))
+Pages = map(file -> joinpath("Mac_share", file), readdir("Mac_share"))
 ```
