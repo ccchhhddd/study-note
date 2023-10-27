@@ -27,7 +27,7 @@ makedocs(
 
 
 deploydocs(
-    repo="https://github.com/ccchhhddd/study-note";
+    repo="https://github.com/ccchhhddd/study-notes";
     push_preview=true
     #    target = "../build",
 )

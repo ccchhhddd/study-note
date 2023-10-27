@@ -1,6 +1,6 @@
 # 个人学习文档分享空间
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://ccchhhddd.github.io/study-note/dev/)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://ccchhhddd.github.io/study-notes/dev/)
 
 ## 学习文档内容
 
