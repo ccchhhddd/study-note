@@ -1,20 +1,20 @@
 # Vuex
 
-#### 1 .vuex 是什么? 
+## 1.vuex 是什么? 
 
 1. 概念：专门在 Vue 中实现集中式状态（数据）管理的一个 Vue 插件，对 vue 应 用中多个组件的共享状态进行集中式的管理（读/写），也是一种组件间通信的方 式，且适用于任意组件间通信。 
 2. Github 地址: https://github.com/vuejs/vuex 
 
-#### 2 .什么时候使用Vuex?
+## 2.什么时候使用Vuex?
 
 1. 多个组件依赖于同一状态
 2. 来自不同组件的行为需要变更同一状态
 
-#### 3.逻辑图：
+## 3.逻辑图：
 
 ![vuex](https://vuex.vuejs.org/vuex.png)
 
-#### 4.基本使用
+## 4.基本使用
 
 1.具体案例
 
@@ -128,7 +128,7 @@ export default {
 
 
 
-#### 5.getters的使用
+### 5.getters的使用
 
 1.概念：当state中的数据需要经过加工后再使用时，可以使用getters加工
 
@@ -153,9 +153,9 @@ export default new Vuex.Store({
 
 
 
-#### 6.四个map方法的使用
+### 6.四个map方法的使用
 
-###### 1.mapState方法：
+##### 1.mapState方法：
 
 帮我们映射state中的数据为计算属性
 
@@ -180,7 +180,7 @@ computed:{
         }
 ```
 
-###### 2.mapGetters方法：
+##### 2.mapGetters方法：
 
 用于帮助我们映射getters中的数据为计算属性
 
@@ -195,7 +195,7 @@ computed:{
         }
 ```
 
-###### 3.mapActions方法：
+##### 3.mapActions方法：
 
 用于帮助我们生成与actions对话的方法，即包含$store.dispatch（xxx）的函数
 
@@ -215,7 +215,7 @@ methods:{
 }
 ```
 
-###### 4.mapMutations方法：
+##### 4.mapMutations方法：
 
 用于帮助我们生成与mutations对话的方法，即包含$store.commit(xxx)的函数
 
@@ -237,7 +237,7 @@ methods:{
 
 
 
-#### 7.模块化+命名空间
+### 7.模块化+命名空间
 
 **1.目的：**让代码更好维护，让更多数据分类更加明确
 
@@ -309,15 +309,15 @@ this.$store.state.a.list
 
 
 
-### 5.vue-router
+## 5.vue-router
 
-#### 1.相关理解
+### 1.相关理解
 
-##### 1.vue-router 的理解 
+#### 1.vue-router 的理解 
 
 vue 的一个插件库，专门用来实现 **SPA 应用** 
 
-##### 2.对 SPA 应用的理解 
+#### 2.对 SPA 应用的理解 
 
 1.单页 Web 应用（single page web application，SPA）。 
 
@@ -327,15 +327,15 @@ vue 的一个插件库，专门用来实现 **SPA 应用**
 
 1. 数据需要通过 ajax 请求获取
 
-##### 3.路由的理解
+#### 3.路由的理解
 
-###### 1.什么是路由?
+##### 1.什么是路由?
 
 ​	1.一个路由就是一组映射关系（key - value） 
 
 ​	2.key 为路径, value 可能是 function 或 component 
 
-###### 2.路由分类
+##### 2.路由分类
 
 1.后端路由：
 
@@ -355,9 +355,9 @@ vue 的一个插件库，专门用来实现 **SPA 应用**
 
 
 
-#### 2.基本路由
+### 2.基本路由
 
-##### 1.基本使用
+#### 1.基本使用
 
 1.安装vue-router ,命令：npm i vue-router
 
@@ -402,7 +402,7 @@ export default new VueRouter({
 
 
 
-##### 2.几个注意点
+#### 2.几个注意点
 
 ​	1.路由组件通常存放在pages文件夹，一般组件通常存放在components文件夹
 
@@ -414,7 +414,7 @@ export default new VueRouter({
 
 
 
-#### 3.嵌套路由
+### 3.嵌套路由
 
 1.配置路由规则，使用children配置项
 
@@ -454,7 +454,7 @@ export default new VueRouter({
 
 
 
-#### 4.路由的query参数
+### 4.路由的query参数
 
 ​	1.传递参数
 
@@ -486,7 +486,7 @@ export default new VueRouter({
 
 
 
-#### 5.命名路由
+### 5.命名路由
 
 1.作用：可以简化路由的跳转
 
@@ -551,7 +551,7 @@ export default new VueRouter({
 
 
 
-#### 6.路由的params参数
+### 6.路由的params参数
 
 1.配置路由，声明接收params参数
 
@@ -568,7 +568,7 @@ $route.params.title
 
 
 
-#### 7.路由的props配置
+### 7.路由的props配置
 
 作用：让路由组件更方便的收到参数
 
@@ -595,7 +595,7 @@ $route.params.title
 
 
 
-#### 8.router-link 的replace属性
+### 8.router-link 的replace属性
 
 ​	1.作用：控制路由跳转时操作浏览器历史记录的模式
 
@@ -607,7 +607,7 @@ $route.params.title
 
 
 
-#### 9.编程式路由导航
+### 9.编程式路由导航
 
 ​	1.作用：不借助router-link实现路由跳转，让路由跳转更加灵活
 
@@ -624,7 +624,7 @@ this.$router.go   //可前进可后退
 
 
 
-#### 10.缓存路由组件
+### 10.缓存路由组件
 
 1.作用：让不展示的路由组件保持挂载，不被销毁
 
@@ -638,7 +638,7 @@ this.$router.go   //可前进可后退
 
 
 
-#### 11.两个新的生命周期钩子
+### 11.两个新的生命周期钩子
 
 1.作用：路由组件所独有的两个钩子，用于捕获路由组件的激活状态。
 
@@ -650,17 +650,17 @@ this.$router.go   //可前进可后退
 
 
 
-#### 12.路由守卫
+### 12.路由守卫
 
-##### 1.作用：
+#### 1.作用：
 
 对路由进行权限控制
 
-##### 2.分类：
+#### 2.分类：
 
 全局守卫、独享守卫、组件内守卫
 
-##### 3.全局守卫：
+#### 3.全局守卫：
 
 ```
 // 全局前置路由守卫——初始化的时候被调用、每次路由切换之前被调用
@@ -684,7 +684,7 @@ router.afterEach((to,from)=>{
 })
 ```
 
-##### 4.独享守卫
+#### 4.独享守卫
 
 ```
  beforeEnter:(to,from,next)=>{
@@ -703,7 +703,7 @@ router.afterEach((to,from)=>{
 
 独享守卫可以和全局路由后置守卫配合使用，但是独享守卫不可以与全局路由前置守卫一起使用，会发生覆盖的情况。
 
-##### 5.组件内守卫
+#### 5.组件内守卫
 
 ```
 // 通过路由规则，进入该组件时被调用
@@ -727,7 +727,7 @@ router.afterEach((to,from)=>{
 
 
 
-#### 13.路由器的两种工作模式
+### 13.路由器的两种工作模式
 
 1.对于一个url来说，什么是hash值？——#及其后面的内容就是hsah值
 
@@ -751,11 +751,11 @@ router.afterEach((to,from)=>{
 
 
 
-### 6.Vue UI组件库
+## 6.Vue UI组件库
 
 该部分无需笔记，直接看官方文档即可
 
-#### 1 .移动端常用 UI 组件库 
+### 1 .移动端常用 UI 组件库 
 
 ​	1.Vant https://youzan.github.io/vant 
 
@@ -765,7 +765,7 @@ router.afterEach((to,from)=>{
 
 
 
-#### 2 .PC 端常用 UI 组件库 
+### 2 .PC 端常用 UI 组件库 
 
 1. Element UI https://element.eleme.cn 
 2. IView UI https://www.iviewui.co

@@ -1,6 +1,7 @@
 # JavaScript
 
-语法大全网站地址： https://blog.csdn.net/qq_51657072/article/details/128831333
+## 1.基本语法
+[语法大全网站地址](https://blog.csdn.net/qq_51657072/article/details/128831333)
 
 const ——设置常量
 
@@ -36,7 +37,7 @@ document.write(todos[0].text);//网页显示
 
 
 
-### 正则表达
+## 2.JS正则表达
 
 1.限定符 ？ *  + {...}
 
@@ -46,8 +47,3 @@ document.write(todos[0].text);//网页显示
 
 4.贪婪与懒惰匹配
 
-
-
-正则表达表单网站：
-
-https://r2coding.com/#/README?id=%e5%b8%b8%e7%94%a8%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e7%a4%ba%e4%be%8b

@@ -1,36 +1,36 @@
 # Vue3笔记
 
-### 0.引言
+## 1.引言
 
-#### 1.    3.0发布的地址：
+### 1.  3.0发布的地址：
 
 https://github.com/vuejs/core/releases/tag/v3.0.0
 
-#### 2.     各个版本地址：
+### 2.  各个版本地址：
 
 https://github.com/vuejs/core/tags
 
-#### 3.vue3提升的方面
+### 3.vue3提升的方面
 
-##### 1.性能提升
+#### 1.性能提升
 
 渲染更快，内存更小
 
-##### 2.源码升级
+#### 2.源码升级
 
 1.使用Proxy代替defineProperty实现响应式
 
 2.重写虚拟 DOM的实现和Tree-Shanking
 
-##### 3.拥抱TypeScript
+#### 3.拥抱TypeScript
 
 Vue3更好支持TypeScript    
 
 TS是未来前端所驱
 
-##### 4.新的特性
+#### 4.新的特性
 
-###### 1.composition API(组合API)
+##### 1.composition API(组合API)
 
 setup配置
 
@@ -40,7 +40,7 @@ watch与watchEffect
 
 provide与inject
 
-###### 2.新的内置组件
+##### 2.新的内置组件
 
 Fragment
 
@@ -48,7 +48,7 @@ teleport
 
 suspense
 
-###### 3.其他改变
+##### 3.其他改变
 
 新的生命周期钩子
 
@@ -58,21 +58,21 @@ data选项应始终被声明为一个函数
 
 
 
-### 1.创建Vue3.0工程
+## 2.创建Vue3.0工程
 
-#### 1.使用脚手架vue-cli创建
+### 1.使用脚手架vue-cli创建
 
 官方文档：https://cli.vuejs.org/zh/guide/creating-a-project.html#vue-create
 
 
 
-#### 2.使用vite创建
+### 2.使用vite创建
 
 官方文档：https://v3.cn.vuejs.org/guide/installation.html#vite
 
 vite官网：https://vitejs.cn
 
-**vite**------新一代前端**构建工具**（grunt、gulp、webpack）
+**vite**-新一代前端**构建工具**（grunt、gulp、webpack）
 
 优势：1.开发环境中，无需打包操作，可快速冷启动
 
@@ -94,11 +94,11 @@ npm run dev
 
 
 
-### 2.常见Composition（组合式） API
+## 3.常见Composition（组合式） API
 
 
 
-#### 1.拉开序幕的setup
+### 1.拉开序幕的setup
 
 **1.理解：**Vue3.0中一个新的配置项，值为一个函数
 
@@ -126,7 +126,7 @@ npm run dev
 
 
 
-#### 2.ref函数
+### 2.ref函数
 
 **作用：**定义一个响应式的数据
 
@@ -147,7 +147,7 @@ npm run dev
 
 
 
-#### 3.reactive函数
+### 3.reactive函数
 
 作用：定义一个**对象类型**的响应式函数（基本类型不要用它，要用`ref`函数）
 
@@ -159,7 +159,7 @@ reactive定义的响应式数据是“深层次的”
 
 
 
-#### 4. Vue3.0的响应式
+### 4. Vue3.0的响应式
 
 通过Proxy(代理)：拦截对象中任意属性的变化，包括：属性值的读写、属性的添加、属性的删除
 
@@ -192,7 +192,7 @@ MDN文档中描述的Proxy与Reflect
 
 
 
-#### 5.reactive对比ref
+### 5.reactive对比ref
 
 1.从定义数据角度对比：
 
@@ -215,13 +215,13 @@ MDN文档中描述的Proxy与Reflect
 
 
 
-#### 6.setup的两个注意点
+### 6.setup的两个注意点
 
-##### 1.setup执行的时机
+#### 1.setup执行的时机
 
 ​		在beforeCreate之前执行一次，this是undefined
 
-##### 2.setup参数
+#### 2.setup参数
 
 ​		props：值为对象，包含：组件外部传递过来，且组件内部声明接收了的属性
 
@@ -235,9 +235,9 @@ MDN文档中描述的Proxy与Reflect
 
 
 
-#### 7.计算属性
+### 7.计算属性
 
-##### 1.computed函数
+#### 1.computed函数
 
 与Vue2.x中computed配置功能一致
 
@@ -268,7 +268,7 @@ setup(){
 
 
 
-##### 2.watch函数
+#### 2.watch函数
 
 **与Vue2.x中watch配置功能一致**
 
@@ -315,7 +315,7 @@ watch(()=>person.job,(newValue,oldValue)=>{
 
 
 
-##### 3.watchEffect函数
+#### 3.watchEffect函数
 
 watch的套路是：既要指明监视的属性，也要指明监视的回调。
 
@@ -338,7 +338,7 @@ watchEffect(()=>{
 
 
 
-#### 8.生命周期
+### 8.生命周期
 
 ![组件生命周期图示](https://cn.vuejs.org/assets/lifecycle.16e4c08e.png)
 
@@ -355,7 +355,7 @@ watchEffect(()=>{
   - `beforeUnmount` ==>`onBeforeUnmount`
   - `unmounted` =====>`onUnmounted`
 
-#### 9.自定义hook函数
+### 9.自定义hook函数
 
 什么是hook？—— 本质是一个函数，把setup函数中使用的Composition API进行了封装。
 
@@ -365,7 +365,7 @@ watchEffect(()=>{
 
 
 
-#### 10.toRef
+### 10.toRef
 
 作用：创建一个 ref 对象，其value值指向另一个对象中的某个属性。
 
@@ -377,9 +377,9 @@ watchEffect(()=>{
 
 
 
-### 3.其它 Composition API
+## 4.其它 Composition API
 
-#### 1.shallowReactive 与 shallowRef
+### 1.shallowReactive 与 shallowRef
 
 - shallowReactive：只处理对象最外层属性的响应式（浅响应式）。
 - shallowRef：只处理基本数据类型的响应式, 不进行对象的响应式处理。
@@ -387,13 +387,13 @@ watchEffect(()=>{
   - 如果有一个对象数据，结构比较深, 但变化时只是外层属性变化 ===> shallowReactive。
   - 如果有一个对象数据，后续功能不会修改该对象中的属性，而是生新的对象来替换 ===> shallowRef。
 
-#### 2.readonly 与 shallowReadonly
+### 2.readonly 与 shallowReadonly
 
 - readonly: 让一个响应式数据变为只读的（深只读）。
 - shallowReadonly：让一个响应式数据变为只读的（浅只读）。
 - 应用场景: 不希望数据被修改时。
 
-#### 3.toRaw 与 markRaw
+### 3.toRaw 与 markRaw
 
 - toRaw：
   - 作用：将一个由`reactive`生成的**响应式对象**转为**普通对象**。
@@ -404,7 +404,7 @@ watchEffect(()=>{
     1. 有些值不应被设置为响应式的，例如复杂的第三方类库等。
     2. 当渲染具有不可变数据源的大列表时，跳过响应式转换可以提高性能。
 
-#### 4.customRef
+### 4.customRef
 
 - 作用：创建一个自定义的 ref，并对其依赖项跟踪和更新触发进行显式控制。
 
@@ -451,7 +451,7 @@ watchEffect(()=>{
   </script>
   ```
 
-#### 5.provide 与 inject
+### 5.provide 与 inject
 
 - 作用：实现**祖与后代组件间**通信
 
@@ -481,7 +481,7 @@ watchEffect(()=>{
      }
      ```
 
-#### 6.响应式数据的判断
+### 6.响应式数据的判断
 
 - isRef: 检查一个值是否为一个 ref 对象
 - isReactive: 检查一个对象是否是由 `reactive` 创建的响应式代理
@@ -492,33 +492,33 @@ watchEffect(()=>{
 
 
 
-### 4.Composition API 的优势
+## 5.Composition API 的优势
 
-#### 1.Options API 存在的问题
+### 1.Options API 存在的问题
 
 使用传统OptionsAPI中，新增或者修改一个需求，就需要分别在data，methods，computed里修改 。
 
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f84e4e2c02424d9a99862ade0a2e4114~tplv-k3u1fbpfcp-watermark.image)
+![img](../assets/Front_end/image1.image)
 
-![img](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e5ac7e20d1784887a826f6360768a368~tplv-k3u1fbpfcp-watermark.image)
+![img](../assets/Front_end/image2.image)
 
-#### 2.Composition API 的优势
+### 2.Composition API 的优势
 
 我们可以更加优雅的组织我们的代码，函数。让相关功能的代码更加有序的组织在一起。
 
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bc0be8211fc54b6c941c036791ba4efe~tplv-k3u1fbpfcp-watermark.image)
+![img](../assets/Front_end/image3.image)
 
-![img](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6cc55165c0e34069a75fe36f8712eb80~tplv-k3u1fbpfcp-watermark.image)
+![img](../assets/Front_end/image4.image)
 
-### 5.新的组件
+## 6.新的组件
 
-#### 1.Fragment
+### 1.Fragment
 
 - 在Vue2中: 组件必须有一个根标签
 - 在Vue3中: 组件可以没有根标签, 内部会将多个标签包含在一个Fragment虚拟元素中
 - 好处: 减少标签层级, 减小内存占用
 
-#### 2.Teleport
+### 2.Teleport
 
 - 什么是Teleport？—— `Teleport` 是一种能够将我们的**组件html结构**移动到指定位置的技术。
 
@@ -533,7 +533,7 @@ watchEffect(()=>{
   </teleport>
   ```
 
-#### 3.Suspense
+### 3.Suspense
 
 - 等待异步组件时渲染一些额外内容，让应用有更好的用户体验
 
@@ -564,9 +564,9 @@ watchEffect(()=>{
     </template>
     ```
 
-### 6.其他
+## 7.其他
 
-#### 1.全局API的转移
+### 1.全局API的转移
 
 - Vue 2.x 有许多全局 API 和配置。
 
@@ -592,7 +592,7 @@ watchEffect(()=>{
   - 将全局的API，即：`Vue.xxx`调整到应用实例（`app`）上
 
 
-#### 2.其他改变
+### 2.其他改变
 
 - data选项应始终被声明为一个函数。
 
@@ -625,9 +625,9 @@ watchEffect(()=>{
     }
     ```
 
-- **移除**keyCode作为 v-on 的修饰符，同时也不再支持`config.keyCodes`
+ **移除**keyCode作为 v-on 的修饰符，同时也不再支持`config.keyCodes`
 
-- **移除**`v-on.native`修饰符
+**移除**`v-on.native`修饰符
 
   - 父组件中绑定事件
 
@@ -648,8 +648,9 @@ watchEffect(()=>{
     </script>
     ```
 
-- **移除**过滤器（filter）
+移除过滤器（filter）
 
-  > 过滤器虽然这看起来很方便，但它需要一个自定义语法，打破大括号内表达式是 “只是 JavaScript” 的假设，这不仅有学习成本，而且有实现成本！建议用方法调用或计算属性去替换过滤器。
+!!! tip
+ 过滤器虽然这看起来很方便，但它需要一个自定义语法，打破大括号内表达式是 “只是 JavaScript” 的假设，这不仅有学习成本，而且有实现成本！建议用方法调用或计算属性去替换过滤器。
 
   
