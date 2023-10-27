@@ -20,7 +20,7 @@ Pages = map(file -> joinpath("Optimization", file), readdir("Optimization"))
 Pages = map(file -> joinpath("Front_end", file), readdir("Front_end"))
 ```
 
-### mac
+### Mac
 ```@contents
 Pages = map(file -> joinpath("mac_share", file), readdir("mac_share"))
 ```

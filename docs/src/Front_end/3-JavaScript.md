@@ -1,11 +1,10 @@
-## 2.JavaScript
+# JavaScript
 
 语法大全网站地址： https://blog.csdn.net/qq_51657072/article/details/128831333
 
 const ——设置常量
 
 ```javascript
-##JavaScript
 const todos=[
 {
     id:1,

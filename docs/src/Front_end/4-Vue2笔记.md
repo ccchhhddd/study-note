@@ -1,4 +1,4 @@
-## 3.Vue2笔记
+# Vue2笔记
 
 nodejs
 
@@ -163,7 +163,7 @@ data与el的2种写法
 
 ##### 1.el有2种写法
 
-（1) new Vue时候配置el属性
+（1） new Vue时候配置el属性
 
 （2）先创建Vue实例，随后再通过vm.$mount('#root')指定el的值
 
@@ -549,7 +549,6 @@ vue中的事件修饰符：
 
     <!--once:事件只触发一次（常用）  -->
     <button @click.once="showInfo">点点试试</button>
-</br>
     <!-- capture：使用事件的捕获模式 -->
     <div class="box1" @click.capture="showMsg(1)">
         div1
@@ -1312,7 +1311,7 @@ vue中的事件修饰符：
 
 (1)旧虚拟DOM 中找到了与新虚拟DOM相同的key:
 
-​		1)若虚拟DOM中的内容没变，直接使用之前的真实DOM
+​		1）若虚拟DOM中的内容没变，直接使用之前的真实DOM
 
 ​		2）若虚拟DOM中内容变了，则生成新的真实DOM，随后替换掉页面中之前的真实DOM
 
