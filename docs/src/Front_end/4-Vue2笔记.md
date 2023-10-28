@@ -233,6 +233,8 @@ data与el的2种写法
 
 ### 5.理解MVVM
 
+![img](../assets/Front_end/image7.png)
+
 **vue的设计受到了MVVM的启发**
 
 **MVVM模型：**
@@ -377,6 +379,8 @@ data与el的2种写法
 ```
 数据代理就好比右图中的实线部分，实现的功能好比就是将data里的name和address放在vm里。这样在编写代码时更为方便，不用vm._data.name这样的写法，而直接vm.name即可。背后的逻辑也是实现了getter()和setter()的这样一个过程，也就是通过Object.defineProperty进行的实现。
 ```
+![img](../assets/Front_end/image8.png)
+
 
 
 ```html
@@ -1498,7 +1502,7 @@ vue中的事件修饰符：
 data里的每一项数据（包括细分的数据）都有对应的getter和setter,以这样的方式实现数据的监测和修改
 
 **如下图所示：**
-
+![img](../assets/Front_end/image9.png)
 
 
 ```html
@@ -1894,7 +1898,9 @@ this.student.hobby.splice(0,1,'xc')
 
 
 **补充cookie:**
+![img](../assets/Front_end/image10.png)
 
+![img](../assets/Front_end/image11.png)
 
 
 **v-clock指令**（没有值）：
@@ -2254,7 +2260,7 @@ Vue的实例对象，以后简称vm
 
 2.为什么要有这个关系：让组件实例对象（vc）可以访问到Vue原型上的属性、方法
 
-
+![img](../assets/Front_end/image12.png)
 
 ```
 <!DOCTYPE html>
@@ -2675,7 +2681,7 @@ export default{
 
 
 **注：**父亲给儿子可以传函数、数组.....在此基础上儿子调用先前父亲给儿子传的函数方法，儿子也可以给父亲传数据
-
+![img](../assets/Front_end/image13.png)
 
 
 #### **总结todolist案例：**

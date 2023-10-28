@@ -79,7 +79,7 @@ vite官网：https://vitejs.cn
 ​			2.轻量快速的热重载（HMR）
 
 ​			3.真正的按需编译，不再等待整个应用编译完成。
-
+![img](../assets/Front_end/image14.png)
 
 ```
 ## 创建工程
@@ -590,7 +590,7 @@ watchEffect(()=>{
 - Vue3.0中对这些API做出了调整：
 
   - 将全局的API，即：`Vue.xxx`调整到应用实例（`app`）上
-
+![img](../assets/Front_end/image15.png)
 
 ### 2.其他改变
 

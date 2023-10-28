@@ -5,6 +5,7 @@ Optimization = map(file -> joinpath("Optimization", file), readdir(joinpath(@__D
 Front_end = map(file -> joinpath("Front_end", file), readdir(joinpath(@__DIR__, "src", "Front_end")))
 Mac_share = map(file -> joinpath("Mac_share", file), readdir(joinpath(@__DIR__, "src", "Mac_share")))
 Web_build = map(file -> joinpath("Web_build", file), readdir(joinpath(@__DIR__, "src", "Web_build")))
+Marxism_Principle = map(file -> joinpath("Marxism_Principle", file), readdir(joinpath(@__DIR__, "src", "Marxism_Principle")))
 
 makedocs(
     sitename="study notes",
@@ -21,7 +22,8 @@ makedocs(
         "Optimization" => Optimization,
         "Front_end"=>Front_end,
         "Mac_share"=>Mac_share,
-        "Web_build"=>Web_build
+        "Web_build"=>Web_build,
+        "Marxism_Principle"=>Marxism_Principle,
     ],
     format=format,
 )
